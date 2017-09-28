@@ -66,30 +66,15 @@ class SiderDemo extends React.Component {
                     >
                         <div className="logo" />
                         <Menu onClick={this.menuItem} theme="dark" defaultSelectedKeys={['1']} mode="inline">
-                            <Menu.Item key="菜单">
+                            <Menu.Item key="caidan">
                                 <Icon type="pie-chart" />
                                 <span>菜单</span>
                             </Menu.Item>
                             <Menu.Item key="Table">
                                 <Link to="/index" style={{ color: '#e2e3db' }} >
                                     <Icon type="line-chart" />
-                                    <span>
-                  index
-                                    </span>
+                                    <span>index</span>
                                 </Link>
-                            </Menu.Item>
-                            <Menu.Item key="Menu">
-                                <Icon type="desktop" />
-                                <span>
-                  Menu
-                                </span>
-                            </Menu.Item>
-                            <Menu.Item key="Tree">
-                                <Icon type="share-alt" />
-
-                                <span>
-                  Tree
-                                </span>
                             </Menu.Item>
                             <SubMenu
                                 key="Form"
