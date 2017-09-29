@@ -1,11 +1,15 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import MenuLeft from '../assembly/MenuLeft'
+import Index from '../assembly/Index'
+import Bar from '../assembly/echarts/Bar'
 
 class RouterConfigInfo extends React.Component {
     render () {
         return (
-            <Route exact path="/index" component={MenuLeft} />
+            <div>
+                <Route exact path="/index" component={Index} />
+                <Route exact path="/Bar" component={Bar} />
+            </div>
         )
     }
 }
