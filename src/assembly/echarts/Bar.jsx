@@ -16,12 +16,7 @@ class Bar extends Component {
             height: '400px'
         }
     }
-    componentDidMount () {
-        this.rendering()
-    }
-    componentWillReceiveProps (nextProps) {
-        this.rendering()
-    }
+
     rendering = () => {
         // this.setState({
         //     width: this.props.width ? this.props.width : '400px',
@@ -32,6 +27,15 @@ class Bar extends Component {
         // 绘制图表
         myChart.setOption(this.props.option)
     }
+
+    componentDidMount () {
+        this.rendering()
+    }
+    componentWillReceiveProps (nextProps) {
+        console.log(nextProps)
+        this.rendering()
+    }
+
     render () {
         return (
             <div id="Bar" style={{ width: this.state.width,

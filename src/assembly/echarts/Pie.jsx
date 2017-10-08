@@ -15,6 +15,7 @@ class Pie extends Component {
         this.rendering()
     }
     componentWillReceiveProps (nextProps) {
+        console.log(nextProps)
         this.rendering()
     }
     rendering = () => {

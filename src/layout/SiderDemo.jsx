@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd'
 import { Link, BrowserRouter } from 'react-router-dom'
 import RouterConfigInfo from '../router/routerInfo'
-
+import { apiPost } from '../api/request'
 const { Header, Content, Footer, Sider } = Layout
 const SubMenu = Menu.SubMenu
 
@@ -28,7 +28,15 @@ class SiderDemo extends React.Component {
         console.log(key)
         console.log(keyPath)
     }
+    init = async () => {
+        let data = await apiPost('/index',
+            {
+                id: 12
+            })
+        console.log(data)
+    }
     componentWillMount () {
+        this.init()
         console.log('组件挂载之前调用')
     }
     componentDidMount () {

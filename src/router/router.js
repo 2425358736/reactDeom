@@ -8,6 +8,7 @@ class RouterConfig extends React.Component {
         return (
             <BrowserRouter>
                 <div>
+                    <Route exact path="/" component={SiderDemo} />
                     <Route exact path="/login" component={WrappedNormalLoginForm} />
                     <Route exact path="/home" component={SiderDemo} />
                     <Route exact path="/home/**" component={SiderDemo} />

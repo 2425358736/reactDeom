@@ -11,15 +11,16 @@ module.exports = {
         "es6": true
     },
 
-    "extends": ["react-app"],
+    "extends": "eslint:recommended",
     "parserOptions": {
         "sourceType": "module",
-        "ecmaVersion": 8,
+        "ecmaVersion": 6,
         "ecmaFeatures": {
             "jsx": true,
             "experimentalObjectRestSpread": true
         }
     },
+    "parser": "babel-eslint",
     "plugins": [
         "react"
     ],
