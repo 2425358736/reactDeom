@@ -91,6 +91,11 @@ class SiderDemo extends React.Component {
                                 <Menu.Item key="WrappedRegistrationForm">
                                     WrappedRegistrationForm
                                 </Menu.Item>
+                                <Menu.Item key="JsonExportExcel">
+                                    <Link to="/JsonExportExcel" style={{ color: '#e2e3db' }} >
+                                        JsonExportExcel
+                                    </Link>
+                                </Menu.Item>
                             </SubMenu>
                             <SubMenu
                                 key="自定义组件"
