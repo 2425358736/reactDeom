@@ -2,9 +2,10 @@ import React from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd'
 import { Link, BrowserRouter } from 'react-router-dom'
 import RouterConfigInfo from '../router/routerInfo'
-import { apiPost } from '../api/request'
+// import { apiPost } from '../api/request'
 const { Header, Content, Footer, Sider } = Layout
 const SubMenu = Menu.SubMenu
+const MenuItem = Menu.Item
 
 class SiderDemo extends React.Component {
     // 构造函数，在创建组件的时候调用
@@ -29,11 +30,11 @@ class SiderDemo extends React.Component {
         console.log(keyPath)
     }
     init = async () => {
-        let data = await apiPost('/index',
-            {
-                id: 12
-            })
-        console.log(data)
+        // let data = await apiPost('/index',
+        //     {
+        //         id: 12
+        //     })
+        // console.log(data)
     }
     componentWillMount () {
         this.init()
@@ -74,44 +75,50 @@ class SiderDemo extends React.Component {
                     >
                         <div className="logo" />
                         <Menu onClick={this.menuItem} theme="dark" defaultSelectedKeys={['1']} mode="inline">
-                            <Menu.Item key="caidan">
+                            <MenuItem key="caidan">
                                 <Icon type="pie-chart" />
                                 <span>菜单</span>
-                            </Menu.Item>
-                            <Menu.Item key="Table">
+                            </MenuItem>
+                            <MenuItem key="index">
                                 <Link to="/index" style={{ color: '#e2e3db' }} >
                                     <Icon type="line-chart" />
                                     <span>index</span>
                                 </Link>
-                            </Menu.Item>
+                            </MenuItem>
                             <SubMenu
                                 key="Form"
                                 title={<span><Icon type="user" /><span>Form</span></span>}
                             >
-                                <Menu.Item key="WrappedRegistrationForm">
+                                <MenuItem key="WrappedRegistrationForm">
+                                    <Link to="/WrappedRegistrationForm" style={{ color: '#e2e3db' }} >
                                     WrappedRegistrationForm
-                                </Menu.Item>
-                                <Menu.Item key="JsonExportExcel">
+                                    </Link>
+                                </MenuItem>
+                                <MenuItem key="JsonExportExcel">
                                     <Link to="/JsonExportExcel" style={{ color: '#e2e3db' }} >
                                         JsonExportExcel
                                     </Link>
-                                </Menu.Item>
+                                </MenuItem>
                             </SubMenu>
                             <SubMenu
                                 key="自定义组件"
                                 title={<span><Icon type="user" /><span>自定义组件</span></span>}
                             >
-                                <Menu.Item key="图片缩略图">
+                                <MenuItem key="图片缩略图">
+                                    <Link to="/Thumbnail" style={{ color: '#e2e3db' }} >
                                     图片缩略图
-                                </Menu.Item>
+                                    </Link>
+                                </MenuItem>
                             </SubMenu>
                             <SubMenu
                                 key="外部组件"
                                 title={<span><Icon type="user" /><span>外部组件</span></span>}
                             >
-                                <Menu.Item key="富文本">
+                                <MenuItem key="富文本">
+                                    <Link to="/RichText" style={{ color: '#e2e3db' }} >
                                     富文本
-                                </Menu.Item>
+                                    </Link>
+                                </MenuItem>
                             </SubMenu>
                         </Menu>
                     </Sider>
