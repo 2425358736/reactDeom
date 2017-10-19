@@ -102,7 +102,7 @@ class SiderDemo extends React.Component {
                             </SubMenu>
                             <SubMenu
                                 key="自定义组件"
-                                title={<span><Icon type="user" /><span>自定义组件</span></span>}
+                                title={<span><Icon type="file-unknown" /><span>自定义组件</span></span>}
                             >
                                 <MenuItem key="图片缩略图">
                                     <Link to="/Thumbnail" style={{ color: '#e2e3db' }} >
@@ -112,7 +112,7 @@ class SiderDemo extends React.Component {
                             </SubMenu>
                             <SubMenu
                                 key="外部组件"
-                                title={<span><Icon type="user" /><span>外部组件</span></span>}
+                                title={<span><Icon type="paper-clip" /><span>外部组件</span></span>}
                             >
                                 <MenuItem key="富文本">
                                     <Link to="/RichText" style={{ color: '#e2e3db' }} >

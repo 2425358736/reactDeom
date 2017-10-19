@@ -1,6 +1,5 @@
 import React from 'react'
 import { Form, Icon, Input, Button } from 'antd'
-import { apiGet } from '../api/request'
 const FormItem = Form.Item
 
 class NormalLoginForm extends React.Component {
@@ -9,14 +8,14 @@ class NormalLoginForm extends React.Component {
         this.props.form.validateFields(async (err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values)
-                let data = await apiGet('/login?loginName=' + values.userName + '&passWord=' + values.password)
-                console.log(data)
-                if (data.code === '202') {
-                    window.location.href = '/home/index'
-                }
-                // if (values.userName === 'guest' && values.password === 'guest') {
+                // let data = await apiGet('/login?loginName=' + values.userName + '&passWord=' + values.password)
+                // console.log(data)
+                // if (data.code === '202') {
                 //     window.location.href = '/home/index'
                 // }
+                if (values.userName === 'guest' && values.password === 'guest') {
+                    window.location.href = '/home/index'
+                }
             }
         })
     }
@@ -84,7 +83,7 @@ class NormalLoginForm extends React.Component {
                             textAlign: 'center',
                             marginTop: '16px'
                         }}
-                        ><span>Username：lzq</span>&nbsp;&nbsp;&nbsp;<span>Password：123456</span></p>
+                        ><span>Username：guest</span>&nbsp;&nbsp;&nbsp;<span>Password：guest</span></p>
                     </FormItem>
                 </Form>
             </div>
